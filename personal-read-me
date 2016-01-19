@@ -232,7 +232,7 @@ cake/console/libs/:
 
 ### UPDATE STRINGS FOR FRENCH SHELL SCRIPT 
 >To generate the -tsn-only for French
-```
+```            admin vendors/shells/tsn_summary.php
 ./cake_run_dev locale generate -tsn-only
 ```
 >>Run i18n method when you wrap new strings.
