@@ -1,0 +1,1571 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAzUABAAAAAAFNgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABbAAAABwAAAAcZMzaOEdERUYAAAGIAAAAHQAAACAAOQAET1MvMgAAAagAAAA+AAAAYHqhde9jbWFwAAAB6AAAAFIAAAFa4azkLWN2dCAAAAI8AAAAKAAAACgFgwioZnBnbQAAAmQAAAGxAAACZVO0L6dnYXNwAAAEGAAAAAgAAAAIAAAAEGdseWYAAAQgAAAFDgAACMz7eroHaGVhZAAACTAAAAAwAAAANgWEOEloaGVhAAAJYAAAAB0AAAAkDGEGa2htdHgAAAmAAAAAEwAAADBEgAAQbG9jYQAACZQAAAAaAAAAGgsICJBtYXhwAAAJsAAAACAAAAAgASgBD25hbWUAAAnQAAACZwAABOD4no+3cG9zdAAADDgAAABsAAAAmF+yXM9wcmVwAAAMpAAAAC4AAAAusPIrFAAAAAEAAAAAyYlvMQAAAADLVHQgAAAAAM/u9uZ4nGNgZGBg4ANiCQYQYGJgBEJuIGYB8xgABMMAPgAAAHicY2Bm42OcwMDKwMLSw2LMwMDQBqGZihmiwHycoKCyqJjB4YPDh4NsDP+BfNb3DIuAFCOSEgUGRgAKDgt4AAB4nGNgYGBmgGAZBkYGEAgB8hjBfBYGCyDNxcDBwMTA9MHhQ9SHrA8H//9nYACyQyFs/sP86/kX8HtB9UIBIxsDXICRCUgwMaACRoZhDwA3fxKSAAAAAAHyAHABJQB/AIEAdAFGAOsBIwC/ALgAxACGAGYAugBNACcA/wCIeJxdUbtOW0EQ3Q0PA4HE2CA52hSzmZDGe6EFCcTVjWJkO4XlCGk3cpGLcQEfQIFEDdqvGaChpEibBiEXSHxCPiESM2uIojQ7O7NzzpkzS8qRqnfpa89T5ySQwt0GzTb9Tki1swD3pOvrjYy0gwdabGb0ynX7/gsGm9GUO2oA5T1vKQ8ZTTuBWrSn/tH8Cob7/B/zOxi0NNP01DoJ6SEE5ptxS4PvGc26yw/6gtXhYjAwpJim4i4/plL+tzTnasuwtZHRvIMzEfnJNEBTa20Emv7UIdXzcRRLkMumsTaYmLL+JBPBhcl0VVO1zPjawV2ys+hggyrNgQfYw1Z5DB4ODyYU0rckyiwNEfZiq8QIEZMcCjnl3Mn+pED5SBLGvElKO+OGtQbGkdfAoDZPs/88m01tbx3C+FkcwXe/GUs6+MiG2hgRYjtiKYAJREJGVfmGGs+9LAbkUvvPQJSA5fGPf50ItO7YRDyXtXUOMVYIen7b3PLLirtWuc6LQndvqmqo0inN+17OvscDnh4Lw0FjwZvP+/5Kgfo8LK40aA4EQ3o3ev+iteqIq7wXPrIn07+xWgAAAAABAAH//wAPeJyFlctvG1UUh+/12DPN1B7P3JnYjj2Ox4/MuDHxJH5N3UdaEUQLqBIkfQQioJWQ6AMEQkIqsPGCPwA1otuWSmTBhjtps2ADWbJg3EpIXbGouqSbCraJw7kzNo2dRN1cnXN1ZvT7zuuiMEI7ncizyA0URofRBJpCdbQuIFShYY+GZRrxMDVtih5TwQPHtXDFFSIKoWIbuREBjLH27Ny4MsbVx+uOJThavebgVrNRLAiYx06rXsvhxLgWx9xpfHdrs/ekc2Pl2cpPCVEITQpwbj8VQhfXSq2m+Wxqaq2D73Kne5e3NjHqQNj3CRYlJlgUl/jRNP+2Gs2pNYRQiOnmUaQDqm30KqKiTTWPWjboxnTWpvgxjXo0KrtZXAHt7hwIz0YVcj88JnKlJKi3NPAwLyDwZudSmJSMMJFDYaOkaol6XtESx3Gt1VTytdZJ3DCLeaVhVnCBH1fycHTxFXwPX+l2e3d6H/TufGGmMTLTnbSJUdo00zuBswMO/nl3YLeL/wnu9/limCuD3vC54h5NBVz6Li414AI8Vx3iiosKcQXUbrvhFFiYb++HN4DaF4XzFW0fIN4XDWJ3a3XQoq9V8WiyRmdsatV9xUcHims1JloH0YUa090G3Tro3mC6c01f+YwCPquINr1PTaCP6rVTOOmf0GE2dBc7zWIhji3/5MchSuBHgDbU99RMWt3YUNMZMJmx92YP6NsHx/5/M1yvInpnkIOM3Z8fA3JQ2lW1RFC1KaBPDFXNAHYYvGy73aYZZZ3HifbeuiVZCpwA3oQBs0wGPYJbJfg60xrKEbKiNtTe1adwrpBRwlAuQ3q3VRaX0QmQ9a49BTSCuF1MLfQ6+tinOubRBZuWPNoMevGMT+V41KitO1is3D/tpMcq1JHZqDHGs8DoYGDkxJgKjHROeTCmhZvzPm9pod+ltKm4PN7Dyvvldlpsg8D+4AUJZ3F/JBstZz7cbFRxsaAGV6yX/dkcycWf8eS3QlQea+YLjdm3yrOnrhFpUyKVvFE4lpv4bO3Svx/6F/4xmiDu/RT5iI++lko18mY1oX+5UGKR6kmVjM/Zb76yfHtxy+h/SyQ0lLdpdKy/lWB6szatetQJ8nZ80A2Qt6ift6gJeavU3BO4gtxs/KCtNPVibCtYCWY3SIlSBPKXZALXiIR9oZeJ1AuMyxLpHIy/yO7vSiSE+kZvk0ihJ30HgHfzZtEMmvV58x6dtqns0XTAW7Vdm4HJ04OCp/crOO7rd9SGxQAE/mVA9xRN+kVSMRFF6S9JFGUtthkjBA5tFCWc2l4V43Ex9GmUP3SI37Jjmir9KqlaDJ4S4JB3vuM/jzyH1+8MuoZ+QGzfnvPoJb96cZlWjMcKLfgDwB7E634JTY+asjsPzS5CiVnEWY+KsrsIN5rn3mAPjqmQBxGjcGKB9f9ZxY3mYC2L85CJ2FXIxKKyHk+dg0FHbuEc7D5NzWUX32WxFcWNGRAbvwSx0RmIXVDuYySafluQBmzA/ssqJAMLnli+WIC90Gw4lm85wcp0qjArEDPJJV/sSx4P9ungTpgMw5gVC1XO4uULq0s3v1rqLi0vX/z65vlH50f8T/RHmSPTk5xxWBWOluMT6WiOy+tdvWxlV/XQb3o3c6Ssr+r6I708GsX9/nzp1tKFh0s3v7m4vAy/Hnb/KMOvc1wump6Il48K6mGDy02X9Yd65pa+nQIjk76lWxCkG8NBCP0HQS9IpAAAeJxjYGRgYGBhcCrq214Qz2/zlUGenQEEzr/77oug/zewFbB+AHI5GJhAogBwKQ0qeJxjYGRgYH3/P46BgZ0BBNgKGBgZUAEPAE/7At0AAAB4nGNngAB2IGYjhBsYBAAIYADVAAAAAAAAAAAAAFwAyAEeAaACCgKmAx4DggRmAAAAAQAAAAwAagAEAAAAAAACAAEAAgAWAAABAAChAAAAAHiclZI7bxQxFIWPd/JkUYQChEhIyAVKgdBMskm1QkKrRETpQiLRUczueB/K7HhlOxttg8LvoKPgP9DxFxANDR0tHRWi4NjrPIBEgh1p/dm+vufcawNYFWsQmP6e4jSyQB2fI9cwj++RE9wTjyPP4LYoI89iWbyLPIe6+Bh5Hs9rryMv4GbtW+RF3EhuRa7jbrIbeQkPkjdUETOLnL0Kip4FVvAhco1RXyMnSPEz8gzWxE7kWTwUp5HnsCLeR57HW/El8gJWa58iL+JO7UfkOh4l9yMv4UnyEtvQGGECgwF66MNBooF1bGCL1ELB/TYU+ZBRlvsKQ44Se6jQ4a7hef+fh72Crv25kp+8lNWGmeKoOI5jJLb1aGIGvb6TjfWNLdkqdFvJw4l1amjlXtXRZqRN7lSRylZZyhBqpVFWmTEXgWfUrpi/hZOQXdOd4rKuXOtEWT3k5IArPRzTUU5tHKjecZkTpnVbNOnt6jzN8240GD4xtikvZW56043rPMg/dS+dlOceXoR+WPbJ55Dsekq1lJpnypsMUsYOdCW30o103Ytu/lvh+5RWFLfBjm9/N8hJntPhvx92rnoE/kyHdGasGy754kw36vsVf/lFeBi+0COu+cfgQr42G3CRpeLoZ53gmfe3X6rcKt5oVxnptHR9JS8ehVUd5wvvahN2uqxOOpMXapibI5k7Zwbt4xBSaTfoKBufhAnO/uqNcfK8OTs0OQ6l7JIqFjDhYj5WcjevCnI/1DDiI8j4ndWb/5YzDZWh79yomWXeXj7Nnw70/2TIeFPTrlSh89k1ObOSRVZWZfgF0r/zJQB4nG2JUQuCQBCEd07TTg36fb2IyBaLd3vWaUh/vmSJnvpgmG8YcmS8X3Shf3R7QA4OBUocUKHGER5NNbOOEvwc1txnuWkTRb/aPjimJ5vXabI+3VfOiyS15UWvyezM2xiGOPyuMohOH8O8JiO4Af+FsAGNAEuwCFBYsQEBjlmxRgYrWCGwEFlLsBRSWCGwgFkdsAYrXFhZsBQrAAA=) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><style>/*github*/
+.codehilite {background-color:#fff;color:#333333;}
+.codehilite .hll {background-color:#ffffcc;}
+.codehilite .c{color:#999988;font-style:italic}
+.codehilite .err{color:#a61717;background-color:#e3d2d2}
+.codehilite .k{font-weight:bold}
+.codehilite .o{font-weight:bold}
+.codehilite .cm{color:#999988;font-style:italic}
+.codehilite .cp{color:#999999;font-weight:bold}
+.codehilite .c1{color:#999988;font-style:italic}
+.codehilite .cs{color:#999999;font-weight:bold;font-style:italic}
+.codehilite .gd{color:#000000;background-color:#ffdddd}
+.codehilite .ge{font-style:italic}
+.codehilite .gr{color:#aa0000}
+.codehilite .gh{color:#999999}
+.codehilite .gi{color:#000000;background-color:#ddffdd}
+.codehilite .go{color:#888888}
+.codehilite .gp{color:#555555}
+.codehilite .gs{font-weight:bold}
+.codehilite .gu{color:#800080;font-weight:bold}
+.codehilite .gt{color:#aa0000}
+.codehilite .kc{font-weight:bold}
+.codehilite .kd{font-weight:bold}
+.codehilite .kn{font-weight:bold}
+.codehilite .kp{font-weight:bold}
+.codehilite .kr{font-weight:bold}
+.codehilite .kt{color:#445588;font-weight:bold}
+.codehilite .m{color:#009999}
+.codehilite .s{color:#dd1144}
+.codehilite .n{color:#333333}
+.codehilite .na{color:teal}
+.codehilite .nb{color:#0086b3}
+.codehilite .nc{color:#445588;font-weight:bold}
+.codehilite .no{color:teal}
+.codehilite .ni{color:purple}
+.codehilite .ne{color:#990000;font-weight:bold}
+.codehilite .nf{color:#990000;font-weight:bold}
+.codehilite .nn{color:#555555}
+.codehilite .nt{color:navy}
+.codehilite .nv{color:teal}
+.codehilite .ow{font-weight:bold}
+.codehilite .w{color:#bbbbbb}
+.codehilite .mf{color:#009999}
+.codehilite .mh{color:#009999}
+.codehilite .mi{color:#009999}
+.codehilite .mo{color:#009999}
+.codehilite .sb{color:#dd1144}
+.codehilite .sc{color:#dd1144}
+.codehilite .sd{color:#dd1144}
+.codehilite .s2{color:#dd1144}
+.codehilite .se{color:#dd1144}
+.codehilite .sh{color:#dd1144}
+.codehilite .si{color:#dd1144}
+.codehilite .sx{color:#dd1144}
+.codehilite .sr{color:#009926}
+.codehilite .s1{color:#dd1144}
+.codehilite .ss{color:#990073}
+.codehilite .bp{color:#999999}
+.codehilite .vc{color:teal}
+.codehilite .vg{color:teal}
+.codehilite .vi{color:teal}
+.codehilite .il{color:#009999}
+.codehilite .gc{color:#999;background-color:#EAF2F5}
+</style><title>personal-read-me</title></head><body><article class="markdown-body"><h1 id="facet-search"><a name="user-content-facet-search" href="#facet-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Facet Search</h1>
+<blockquote>
+<p>/home/arturo/Projects/rpmsolutions/app/views/_brain/themes/tsn/scripts/catalog/tires.ctp<br />
+/home/arturo/Projects/rpmsolutions/app/views/_brain/themes/tsn/scripts/catalog/search.ctp<br />
+/home/arturo/Projects/rpmsolutions/app/views/_shared/scripts/catalog/search.ctp<br />
+/home/arturo/Projects/rpmsolutions/app/controllers/catalog_controller.php<br />
+/home/arturo/Projects/rpmsolutions/app/views/_brain/themes/tsn/elements/catalog/filters.ctp</p>
+<p>The issue is that when you select the checkbox for brand, the code doesn&rsquo;t filter out the other brands. </p>
+<p>onClick of a checkbox = reloadSearchResults is called and then the tires.ctp.displayResult(tires) is called with the $products php variable as an argument in order to show tires.</p>
+<p>The enableFilters function is called whenever a checkbox is selected. </p>
+<p>I need to find out before the reloadSearchResults function is called what php is doing to get the brands back which then passed to filterFilters array as $filter_Id.</p>
+<p>The query on catalog_controller.php for search is returning all of the brand tires.<br />
+The issue is that this is only happening when a user selects the brands checkbox.</p>
+<p>Inside of enable filters is where some of the filters get the disabled set to false.  Inside of .each(filters, function(filter, filtervals))</p>
+</blockquote>
+<div class="codehilite"><pre><span class="nx">$filter_ids</span>
+
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">filters</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">filter</span><span class="p">,</span> <span class="nx">filtervals</span><span class="p">){</span>
+  <span class="kr">debugger</span><span class="p">;</span>
+  <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">filtervals</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span> <span class="kr">debugger</span><span class="p">;</span>
+    <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="k">this</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;disabled&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<blockquote>
+<p>Then filterFilters(arr) is then called with the variable $filter_id.  Inside of $filter_id array is where all of the products for the filter data are stored. </p>
+</blockquote>
+<h2 id="faceted-search"><a name="user-content-faceted-search" href="#faceted-search" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Faceted Search</h2>
+<blockquote>
+<p>__findProducts is called with the filter object.<br />
+It collect the correct promtion id from $data[&lsquo;Promotion&rsquo;]</p>
+</blockquote>
+<p>Conditions for the promotion was being set inside of _findProct this function was taking the filter object and calling getRebateLines(id=array) with the array of id<br />
+on the admin/model/promotions.  </p>
+<p>Solution for returning multiple promotions was in adding the &lsquo;all&rsquo; count to the find model method, it use to be &lsquo;first&rsquo;</p>
+<div class="codehilite"><pre><span class="p">$</span><span class="nv">lines</span><span class="x"> = </span><span class="p">$</span><span class="nv">this</span><span class="x">-&gt;find(&#39;all&#39;, array(</span>
+<span class="x">      &#39;conditions&#39; =&gt; array(</span>
+<span class="x">        &#39;Promotion.id&#39; =&gt; </span><span class="p">$</span><span class="nv">promotion_id</span><span class="x">,</span>
+<span class="x">        &#39;CURDATE() BETWEEN Promotion.begins AND Promotion.ends&#39;, // centralize</span>
+<span class="x">      ),</span>
+<span class="x">    ));</span>
+</pre></div>
+
+
+<h3 id="faceted"><a name="user-content-faceted" href="#faceted" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Faceted</h3>
+<blockquote>
+<p>_findProducts inside of <code>controller/catalog_controller.php</code> is where the initial query for the products is.</p>
+</blockquote>
+<p>detects a change in tire.ctp for the filter<br />
+the sets url paramas in <code>addSearchFilters()</code> tire.ctp<br />
+Then pushChangeUrl with Jquery with sets up hashchange event handler <code>tire.ctp</code><br />
+<code>haschange</code> set all of the filter checkboxes to checked, false.<br />
+from haschange there is an AJAX call to _findProducts with the searchFilter obj as the data. <br />
+the warranty needs to a tilda with an array on it similar to promotions and brand. </p>
+<h2 id="debug-code-for-local-tire-finder"><a name="user-content-debug-code-for-local-tire-finder" href="#debug-code-for-local-tire-finder" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DEBUG CODE FOR LOCAL TIRE FINDER</h2>
+<blockquote>
+<p>found in views/_shared/scripts/app.ctp<br />
+<div class="codehilite"><pre><span class="nx">url</span><span class="o">:</span> <span class="nx">debug</span> <span class="o">?</span> <span class="s2">&quot;http://wpapi.local&quot;</span><span class="o">+</span><span class="nx">apiRoute</span> <span class="o">:</span> <span class="s2">&quot;http://wpapi.tcsgeeks.com&quot;</span><span class="o">+</span><span class="nx">apiRoute</span>
+</pre></div>
+</p>
+<p>NOTE: added a class to the filters in the view did not work. <br />
+function doSearch on the tires.ctp does an ajax call to the server with the filters selected, The callback functions on the load function get called with the filter_ID&rsquo;s param. <br />
+The issue is that on the search function inside of the catalog_controller the current_conditions for brand has the SQL Query for manufacture id or array with width and ratio and tire.<br />
+The $data = $this-&gt;MyProduct-&gt;MyManufacturer-&gt;getRecordsWithActiveProducts($this-&gt;_current_conditions, false, &lsquo;MyProduct.manufacturer_id&rsquo;) calls:<br />
+<div class="codehilite"><pre>  <span class="kd">function</span> <span class="nx">getRecordsWithActiveProducts</span><span class="p">(</span><span class="nx">$conditions</span><span class="o">=</span><span class="nx">array</span><span class="p">(),</span> <span class="nx">$list_only</span><span class="o">=</span><span class="kc">true</span><span class="p">,</span> <span class="nx">$exclude</span><span class="o">=</span><span class="kc">null</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">empty</span><span class="p">(</span><span class="nx">$conditions</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">$exclude</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nx">$conditions</span><span class="cp">[</span><span class="s1">&#39;AND&#39;</span><span class="cp">]</span><span class="p">))</span> <span class="p">{</span>
+                <span class="nx">foreach</span> <span class="p">(</span><span class="nx">$conditions</span><span class="cp">[</span><span class="s1">&#39;AND&#39;</span><span class="cp">]</span> <span class="nx">AS</span> <span class="nx">$k</span> <span class="o">=&gt;</span> <span class="o">&amp;</span><span class="nx">$filter_type</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="p">(</span><span class="nx">is_array</span><span class="p">(</span><span class="nx">$filter_type</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">key</span><span class="p">(</span><span class="nx">$filter_type</span><span class="p">)</span><span class="o">===</span><span class="nx">$exclude</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">unset</span><span class="p">(</span><span class="nx">$conditions</span><span class="cp">[</span><span class="s1">&#39;AND&#39;</span><span class="cp">][</span><span class="mi">0</span><span class="cp">]</span><span class="p">);</span>
+                        <span class="k">break</span><span class="p">;</span>
+                    <span class="p">}</span>
+                <span class="p">}</span>
+
+                <span class="k">if</span> <span class="p">(</span><span class="nx">empty</span><span class="p">(</span><span class="nx">$conditions</span><span class="cp">[</span><span class="s1">&#39;AND&#39;</span><span class="cp">]</span><span class="p">))</span> <span class="nx">unset</span><span class="p">(</span><span class="nx">$conditions</span><span class="cp">[</span><span class="s1">&#39;AND&#39;</span><span class="cp">]</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="nx">isset</span><span class="p">(</span><span class="nx">$GLOBALS</span><span class="cp">[</span><span class="s1">&#39;Catalog&#39;</span><span class="cp">][</span><span class="s1">&#39;use_installer_conditions&#39;</span><span class="cp">]</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nx">$GLOBALS</span><span class="cp">[</span><span class="s1">&#39;Catalog&#39;</span><span class="cp">][</span><span class="s1">&#39;use_installer_conditions&#39;</span><span class="cp">]</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nx">$this</span><span class="o">-&gt;</span><span class="nx">getCatalogInstallerList</span><span class="p">(</span><span class="nx">$conditions</span><span class="p">,</span> <span class="nx">$list_only</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+            <span class="k">return</span> <span class="nx">$this</span><span class="o">-&gt;</span><span class="nx">getCatalogList</span><span class="p">(</span><span class="nx">$conditions</span><span class="p">,</span> <span class="nx">$list_only</span><span class="p">);</span>
+        <span class="p">}</span>
+  <span class="p">}</span>
+</pre></div>
+</p>
+<h3 id="old-code-for-warranties"><a name="user-content-old-code-for-warranties" href="#old-code-for-warranties" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Old Code for warranties</h3>
+<div class="codehilite"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.warranty-filter&quot;</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="nx">enableFilters</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">selected</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">warranties</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">selected</span>    <span class="o">=</span> <span class="p">[],</span>
+            <span class="nx">warranties</span>  <span class="o">=</span> <span class="p">[];</span>
+
+
+        <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.warranty&quot;</span><span class="p">).</span><span class="nx">find</span><span class="p">(</span><span class="s2">&quot;input[type=checkbox]:checked&quot;</span><span class="p">).</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">warranties</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">$</span><span class="p">(</span><span class="nx">element</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/k/g</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">).</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;  &#39;</span><span class="p">));</span>
+            <span class="nx">$</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="nx">warranties</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">key</span><span class="p">,</span> <span class="nx">warranty</span><span class="p">){</span>
+                <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">warrantyItem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">warrantyItem</span> <span class="o">&lt;</span> <span class="nx">warranty</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">warrantyItem</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="kr">debugger</span>
+                    <span class="k">if</span><span class="p">(</span><span class="nx">warranty</span><span class="p">[</span><span class="nx">warrantyItem</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;No Warranty&#39;</span><span class="p">){</span>
+                        <span class="nx">warranty</span><span class="p">[</span><span class="nx">warrantyItem</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                    <span class="p">}</span>
+                    <span class="nx">warranty</span><span class="p">[</span><span class="nx">warrantyItem</span><span class="p">]</span> <span class="o">=</span> <span class="nb">parseInt</span><span class="p">(</span><span class="nx">warranty</span><span class="p">[</span><span class="nx">warrantyItem</span><span class="p">]);</span>
+                <span class="p">}</span>
+                <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">||</span> <span class="nx">warranty</span> <span class="o">&gt;</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]){</span>
+                    <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">warranty</span><span class="p">;</span>
+                <span class="p">}</span> 
+                <span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;undefined&#39;</span> <span class="o">||</span> <span class="nx">warranty</span> <span class="o">&lt;</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]){</span>
+                    <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">warranty</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">});</span>
+        <span class="p">});</span>
+        <span class="cp">&lt;?</span> <span class="k">if</span> <span class="p">(</span><span class="nx">check_setting</span><span class="p">(</span><span class="s1">&#39;Catalog&#39;</span><span class="p">,</span> <span class="s1">&#39;advanced_filters&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span> <span class="p">{</span> <span class="cp">?&gt;</span>
+            <span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#selected-warranty-id-&#39;</span><span class="o">+</span><span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">&quot;name&quot;</span><span class="p">)).</span><span class="nx">show</span><span class="p">();</span>
+            <span class="c1">// $(this).parent().hide();</span>
+        <span class="cp">&lt;?</span> <span class="p">}</span> <span class="cp">?&gt;</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+            <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nx">searchFilter</span><span class="p">.</span><span class="nx">WarrantyMax</span> <span class="o">=</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;max&#39;</span><span class="p">];</span>
+        <span class="nx">searchFilter</span><span class="p">.</span><span class="nx">WarrantyMin</span> <span class="o">=</span> <span class="nx">selected</span><span class="p">[</span><span class="s1">&#39;min&#39;</span><span class="p">];</span>
+        <span class="nx">addSearchFilters</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<p>Inside of MyManufactuer model.<br />
+If the $exclude === inArray($condition) {Remove $condition[$exclude]} </p>
+</blockquote>
+<h2 id="new-case-for-myinstallers"><a name="user-content-new-case-for-myinstallers" href="#new-case-for-myinstallers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>NEW CASE FOR MYINSTALLERS</h2>
+<blockquote>
+<p>The element for footer was kept the same and the new connct with us has the installer element checks<br />
+<div class="codehilite"><pre><span class="cp">&lt;?</span> <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="p">{</span> 
+    <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> 
+    <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">arr</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">])</span> <span class="p">{</span> 
+            <span class="nx">arr</span><span class="p">[</span><span class="nx">i</span> <span class="o">+</span><span class="mi">1</span><span class="p">]</span> 
+    <span class="p">}</span>  <span class="cp">?&gt;</span>
+</pre></div>
+</p>
+</blockquote>
+<h2 id="new-case-for-beast-phase-5"><a name="user-content-new-case-for-beast-phase-5" href="#new-case-for-beast-phase-5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>NEW CASE FOR BEAST-PHASE-5</h2>
+<blockquote>
+<p>The data is set on brain themes tsn script schedule_appointmetn.ctp<br />
+The view is set on views _shared catalog schedule_appointment.ctp</p>
+<p>tire.has_mailin_rebate</p>
+</blockquote>
+<h2 id="promotions-how-they-are-displayed-on-the-site-for-tsn"><a name="user-content-promotions-how-they-are-displayed-on-the-site-for-tsn" href="#promotions-how-they-are-displayed-on-the-site-for-tsn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PROMOTIONS HOW THEY ARE DISPLAYED ON THE SITE FOR TSN</h2>
+<blockquote>
+<p>app/views/brain/themes/tsn/css/catalog.less<br />
+app/views/brain/themes/tsn/scripts/catalog/tires.ctp </p>
+</blockquote>
+<h2 id="catalog-results-for-tsn"><a name="user-content-catalog-results-for-tsn" href="#catalog-results-for-tsn" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CATALOG RESULTS FOR TSN</h2>
+<blockquote>
+<p>app/views/_brain/themes/tsn/goodyear_landing/index.ctp<br />
+app/views/_brain/themes/tsn/scripts/catalog/tires.ctp</p>
+</blockquote>
+<h3 id="get-french-version-of-mycategory"><a name="user-content-get-french-version-of-mycategory" href="#get-french-version-of-mycategory" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>GET FRENCH VERSION OF MYCATEGORY</h3>
+<blockquote>
+<p>I needed to get the French version of the Category string, I couldn&rsquo;t do this with JS, so I needed to foreach it in PHP inside of catalog controller.<br />
+<div class="codehilite"><pre><span class="x">if(</span><span class="p">$</span><span class="nv">GLOBALS</span><span class="x">[&#39;_Settings&#39;][&#39;locale&#39;] != &#39;en-us&#39;) </span><span class="err">{</span><span class="x"></span>
+<span class="x">    foreach(</span><span class="p">$</span><span class="nv">products</span><span class="x"> as </span><span class="p">$</span><span class="nv">key</span><span class="x"> =&gt; </span><span class="p">$</span><span class="nv">product</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">        foreach (</span><span class="p">$</span><span class="nv">product</span><span class="x">[&#39;MyCategory&#39;] as </span><span class="p">$</span><span class="nv">k</span><span class="x"> =&gt; </span><span class="p">$</span><span class="nv">category</span><span class="x">) </span><span class="err">{</span><span class="x"></span>
+<span class="x">            </span><span class="p">$</span><span class="nv">products</span><span class="x">[</span><span class="p">$</span><span class="nv">key</span><span class="x">][&#39;MyCategory&#39;][</span><span class="p">$</span><span class="nv">k</span><span class="x">][&#39;name&#39;] = __(</span><span class="p">$</span><span class="nv">category</span><span class="x">[&#39;name&#39;], true);</span>
+<span class="x">        }</span>
+<span class="x">    }</span>
+<span class="x">}</span>
+</pre></div>
+</p>
+</blockquote>
+<h1 id="how-to-run-a-shell-script"><a name="user-content-how-to-run-a-shell-script" href="#how-to-run-a-shell-script" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HOW TO RUN A SHELL SCRIPT</h1>
+<blockquote>
+<p>Path wherer Kenny and I ran it. <br />
+/var/www/rpmsolutions</p>
+<p>This comand is saying link a symlink from<br />
+/opt/phpfarm/inst/php-5.3.29/bin/php </p>
+<p>to <br />
+/usr/bin/php </p>
+<p>this will allow me to run php 5.3 from anywhere I want.</p>
+</blockquote>
+<h4 id="symlink-command"><a name="user-content-symlink-command" href="#symlink-command" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Symlink Command:</h4>
+<blockquote>
+<p><div class="codehilite"><pre>sudo ln -s /opt/phpfarm/inst/php-5.3.29/bin/php /usr/bin/php 
+</pre></div>
+<br />
+Unlink <br />
+<div class="codehilite"><pre>sudo unlink link/path
+</pre></div>
+</p>
+</blockquote>
+<h4 id="available-shells"><a name="user-content-available-shells" href="#available-shells" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Available Shells:</h4>
+<blockquote>
+<p>./cake_run_dev will show you all of the bash scripts that have been created. <br />
+cake_run_dev will run shell scripts that have been created.</p>
+</blockquote>
+<p>Paths to Shells</p>
+<p>admin/vendors/shells/:</p>
+<blockquote>
+<blockquote>
+<p>test <br />
+  locale<br />
+  many more&hellip;</p>
+</blockquote>
+</blockquote>
+<p>vendors/shells/:</p>
+<blockquote>
+<blockquote>
+<p>none</p>
+</blockquote>
+</blockquote>
+<p>cake/console/libs/:</p>
+<blockquote>
+<blockquote>
+<p>console<br />
+  i18n<br />
+  bake<br />
+  many more&hellip;</p>
+</blockquote>
+</blockquote>
+<h3 id="update-strings-for-french-shell-script"><a name="user-content-update-strings-for-french-shell-script" href="#update-strings-for-french-shell-script" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>UPDATE STRINGS FOR FRENCH SHELL SCRIPT</h3>
+<blockquote>
+<p>To generate the -tsn-only for French<br />
+<div class="codehilite"><pre>./cake_run_dev locale generate -tsn-only
+</pre></div>
+</p>
+<blockquote>
+<p>Run i18n method when you wrap new strings.<br />
+<div class="codehilite"><pre>./cake_run_dev locale i18n
+</pre></div>
+<br />
+To update when you add a new translations then you will see it reflected in the default.po file.<br />
+<div class="codehilite"><pre>./cake_run_dev locale update_locales
+</pre></div>
+</p>
+</blockquote>
+</blockquote>
+<h2 id="__-function"><a name="user-content-__-function" href="#__-function" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>__() function</h2>
+<blockquote>
+<p>When you want the string to be translated and echoed into french wrap the string with Cake&rsquo;s __() function</p>
+</blockquote>
+<div class="codehilite"><pre>__<span class="o">(</span><span class="s1">&#39;Some String Here&#39;</span><span class="o">)</span><span class="p">;</span>
+</pre></div>
+
+
+<blockquote>
+<p>If you want the string return instead of echoed then add a second paramenter of true to the function.</p>
+</blockquote>
+<div class="codehilite"><pre>__<span class="o">(</span><span class="s1">&#39;Some String Here&#39;</span>, <span class="nb">true</span><span class="o">)</span><span class="p">;</span>
+<span class="sb">`</span>
+<span class="sb">`</span>&gt;<span class="sb">`</span>
+In order <span class="k">for</span> French characters to be converted in the browers the string needs to be injected into the htmlentities <span class="k">function</span>.
+
+<span class="sb">```</span>bash
+htmlentities<span class="o">(</span><span class="s1">&#39;THE STRING&#39;</span>, ENT_COMPAT, <span class="s1">&#39;UTF-8&#39;</span><span class="o">)</span><span class="p">;</span>
+htmlentities<span class="o">(</span>__<span class="o">(</span><span class="s1">&#39;Some String Here&#39;</span>, <span class="nb">true</span><span class="o">)</span>, ENT_COMPAT, <span class="s1">&#39;UTF-8&#39;</span><span class="o">)</span><span class="p">;</span>
+</pre></div>
+
+
+<h2 id="dyanmic-contact"><a name="user-content-dyanmic-contact" href="#dyanmic-contact" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dyanmic Contact</h2>
+<p>$template_email is the template to use inside of the functions. <br />
+Setting debug to true will make it so that you see the email after submitting<br />
+<div class="codehilite"><pre><span class="x">var </span><span class="p">$</span><span class="nv">debug</span><span class="x"> = true;</span>
+</pre></div>
+</p>
+<h1 id="contact-us"><a name="user-content-contact-us" href="#contact-us" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Contact US</h1>
+<div class="codehilite"><pre><span class="nx">$http</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/catalog/set_vehicle&#39;</span><span class="p">,</span> <span class="p">{</span><span class="nx">TireGuideRecord</span><span class="o">:</span> <span class="nx">tireGuideRecord</span><span class="p">})</span>
+<span class="p">.</span><span class="nx">success</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">status</span><span class="p">,</span> <span class="nx">headers</span><span class="p">,</span> <span class="nx">config</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">TG</span><span class="p">)</span> <span class="p">{</span>                           
+        <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">selected_size</span> <span class="o">=</span> <span class="nx">data</span><span class="cp">[</span><span class="s1">&#39;TG&#39;</span><span class="cp">][</span><span class="mi">0</span><span class="cp">][</span><span class="s1">&#39;TireGuideRecord&#39;</span><span class="cp">][</span><span class="s1">&#39;FTC_TireSize&#39;</span><span class="cp">]</span><span class="p">;</span>
+        <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">CYEAR</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">CYEAR</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">MAKE</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">MAKE</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">MODEL</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">MODEL</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">OPTION1</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">OPTION1</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">year</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">year_value</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">make</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">make_value</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">model</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">model_value</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">.</span><span class="nx">option</span> <span class="o">=</span> <span class="nx">tireGuideRecord</span><span class="p">.</span><span class="nx">option_value</span><span class="p">;</span>
+
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">change_vehicle</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+     <span class="nx">$scope</span><span class="p">.</span><span class="nx">ajaxSummaryPiece</span><span class="p">(</span><span class="s1">&#39;vehicle&#39;</span><span class="p">,</span> <span class="nx">$scope</span><span class="p">.</span><span class="nx">summary</span><span class="p">.</span><span class="nx">vehicle</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+
+
+<h2 id="php-import-method-from-different-classes"><a name="user-content-php-import-method-from-different-classes" href="#php-import-method-from-different-classes" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>PHP Import method from different classes</h2>
+<blockquote>
+<p><div class="codehilite"><pre><span class="nt">App</span><span class="o">:</span><span class="nd">:import</span><span class="o">(</span><span class="s1">&#39;Helper&#39;</span><span class="o">,</span> <span class="s1">&#39;LocaleDate&#39;</span><span class="o">);</span>
+<span class="o">$</span><span class="nt">this-</span><span class="o">&gt;</span><span class="nt">LocaleDateHelper</span> <span class="o">=</span> <span class="nt">new</span> <span class="nt">LocaleDateHelper</span><span class="o">;</span>
+</pre></div>
+<br />
+In the locale helper I needed to add an argument for milliseconds which I did by transforming the date to millis with</p>
+</blockquote>
+<div class="codehilite"><pre><span class="nt">echo</span> <span class="s1">&#39;This is the date &#39;</span><span class="o">.</span> <span class="o">$</span><span class="nt">this-</span><span class="o">&gt;</span><span class="nt">LocaleDateHelper-</span><span class="o">&gt;</span><span class="nt">getDate</span><span class="o">(</span><span class="nt">date</span><span class="o">(</span><span class="s2">&quot;n/j/y&quot;</span><span class="o">))</span> <span class="o">.</span> <span class="s1">&#39; @ &#39;</span> <span class="o">.</span> <span class="o">$</span><span class="nt">this-</span><span class="o">&gt;</span><span class="nt">LocaleDateHelper-</span><span class="o">&gt;</span><span class="nt">getFormattedTime</span><span class="o">(</span><span class="nt">strtotime</span><span class="o">(</span><span class="nt">date</span><span class="o">(</span><span class="s1">&#39;g:i a&#39;</span><span class="o">)))</span> <span class="o">.</span> <span class="s1">&#39;&lt;br&gt;&#39;</span><span class="o">;</span>
+</pre></div>
+
+
+<h2 id="element-rendering-with-cakephp"><a name="user-content-element-rendering-with-cakephp" href="#element-rendering-with-cakephp" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ELEMENT RENDERING WITH CAKEPHP</h2>
+<blockquote>
+<p>You can render an element with Cake and add conditions to the query for the data that will be placed in the element.<br />
+<div class="codehilite"><pre>&lt;?<span class="o">=</span><span class="nv">$this</span>-&gt;element<span class="o">(</span><span class="s1">&#39;promo-box-promotions&#39;</span>, array<span class="o">(</span>
+    <span class="s1">&#39;conditions&#39;</span> <span class="o">=</span>&gt; array<span class="o">(</span>
+        <span class="s1">&#39;Promotion.featured&#39;</span> <span class="o">=</span>&gt; <span class="nb">true</span>,
+        <span class="s1">&#39;Promotion.link_to&#39;</span> <span class="o">=</span>&gt; <span class="s1">&#39;Rebate&#39;</span>,
+        <span class="s1">&#39;Promotion.show_on_home_page&#39;</span> <span class="o">=</span>&gt; <span class="nb">true</span>
+    <span class="o">)</span>,
+    <span class="s1">&#39;limit&#39;</span> <span class="o">=</span>&gt; <span class="o">(</span>isset<span class="o">(</span><span class="nv">$limit</span><span class="o">)</span>
+        ? <span class="nv">$limit</span>
+        : 2
+    <span class="o">)</span>,
+    <span class="s1">&#39;list&#39;</span> <span class="o">=</span>&gt; <span class="nb">true</span>,
+<span class="o">))</span>?&gt;
+</pre></div>
+</p>
+</blockquote>
+<h2 id="cakephp-elements"><a name="user-content-cakephp-elements" href="#cakephp-elements" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CakePHP ELEMENTS</h2>
+<blockquote>
+<p>CakePHP elements - An element is a mini-view that can be included in other views and even elements.  They are outputed using the element method of the view.</p>
+</blockquote>
+<div class="codehilite"><pre><span class="nv">$this</span>-&gt;element<span class="o">(</span><span class="s1">&#39;elementName&#39;</span>, arrayOfConditions<span class="o">)</span><span class="p">;</span>
+</pre></div>
+
+
+<blockquote>
+<p><code>arrayOfConditions</code> - Pass data to an element through the element’s second argument.  The second argument combines options for the element with the data for the element to pass.</p>
+</blockquote>
+<h4 id="querying-fields"><a name="user-content-querying-fields" href="#querying-fields" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Querying Fields</h4>
+<p>Querying fields are Conditional you don&rsquo;t have to pull in the entire table. </p>
+<div class="codehilite"><pre><span class="nv">$query</span><span class="o">[</span><span class="s1">&#39;fields&#39;</span><span class="o">]</span> <span class="o">=</span> array<span class="o">(</span>
+    <span class="s1">&#39;Promotion.link_to&#39;</span>,
+    <span class="s1">&#39;Promotion.image_home_page_id&#39;</span>,
+    <span class="s1">&#39;Promotion.id&#39;</span>,
+    <span class="s1">&#39;Promotion.slug&#39;</span>,
+    <span class="s1">&#39;Promotion.title&#39;</span>,
+    <span class="s1">&#39;Promotion.url&#39;</span>,
+    <span class="s1">&#39;Promotion.order&#39;</span>,
+    <span class="s1">&#39;Promotion.ends&#39;</span>,
+    <span class="s1">&#39;Promotion.show_on_home_page&#39;</span>,
+    <span class="s1">&#39;Promotion.show_on_specials_page&#39;</span>,
+    <span class="s1">&#39;Promotion.teaser&#39;</span>,
+    <span class="s1">&#39;Promotion.button_email&#39;</span>,
+    <span class="s1">&#39;Promotion.button_print&#39;</span>,
+    <span class="s1">&#39;Promotion.featured&#39;</span>,
+    <span class="s1">&#39;ImageHomePage.name&#39;</span>,
+    <span class="s1">&#39;ImageHomePage.type&#39;</span>,
+<span class="o">)</span><span class="p">;</span>
+
+<span class="nv">$promotions</span> <span class="o">=</span> <span class="nv">$this</span>-&gt;Promotion-&gt;find<span class="o">(</span><span class="s1">&#39;all&#39;</span>, <span class="nv">$query</span><span class="o">)</span><span class="p">;</span>
+</pre></div>
+
+
+<h1 id="what-is-the-_shared-folder"><a name="user-content-what-is-the-_shared-folder" href="#what-is-the-_shared-folder" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is the _shared folder</h1>
+<blockquote>
+<p>The shared folder has a symlink to the webroot of the website. <br />
+You can see where the /shared/<em>.</em> links to inside of <code>/app/config/routes.php</code><br />
+<div class="codehilite"><pre><span class="o">//</span><span class="nt">shared</span> <span class="nt">file</span> <span class="nt">routing</span>
+<span class="nt">Router</span><span class="o">:</span><span class="nd">:connect</span><span class="o">(</span><span class="s1">&#39;/shared_js/*&#39;</span><span class="o">,</span> <span class="nt">array</span><span class="o">(</span><span class="s1">&#39;controller&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;shared_files&#39;</span><span class="o">));</span>
+</pre></div>
+</p>
+<p>Look at the queries on myInstallers pages and we figured out that the only thing needed was name and url.</p>
+</blockquote>
+<p>INstaller controller <br />
+and in the view you will find the fucntion FIND to query contentsSubcatergory<br />
+The class in app controller for promotion calls a qurry then sets &lsquo;promotions&rsquo; and it can be acessed in the controller as $this-&gt;$promotion in the view it is $promotion<br />
+this-&gt;$var add to viewVars<br />
+MyInstaller Controlle -&gt; app_controller setAssociatedPromotions() is called in appController.<br />
+On the contents_controller inside of the view removed the same setAssociatedPromotions();</p>
+<p>What is in this-&gt;viewVars array inside of function view()</p>
+<h2 id="services"><a name="user-content-services" href="#services" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Services</h2>
+<blockquote>
+<p>this is the MainService page.<br />
+<div class="codehilite"><pre>/app/views/_brain/themes/tsn/pages/services.ctp
+</pre></div>
+</p>
+<p>this is the IndividualService page<br />
+<div class="codehilite"><pre>/app/views/_brain/themes/tsn/contents/category.ctp
+</pre></div>
+</p>
+</blockquote>
+<h2 id="vagrantfile"><a name="user-content-vagrantfile" href="#vagrantfile" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>VAGRANTFILE</h2>
+<div class="codehilite"><pre>config.vm.synced_folder &quot;../&quot;, &quot;/var/www/rpmsolutions&quot;, id: &quot;rpmsolutions&quot;, :sync_type =&gt; &quot;default&quot;, :owner =&gt; &quot;vagrant&quot;, :group =&gt; &quot;www-data&quot;, :mount_options =&gt; [&quot;dmode=775,fmode=664&quot;]
+</pre></div>
+
+
+<h1 id="kenny-presentation"><a name="user-content-kenny-presentation" href="#kenny-presentation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Kenny Presentation</h1>
+<blockquote>
+<p>NGINX - pageSpeed is compiled into NGINX<br />
+Apche + ModPHP<br />
+PHP + Hacked up CakePHP<br />
+Percona MySQL<br />
+Multi-Tendant App 1.1.2 beta Cake is at version 3.</p>
+</blockquote>
+<h3 id="concepts"><a name="user-content-concepts" href="#concepts" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Concepts</h3>
+<blockquote>
+<p>5 Request at a time.<br />
+Bundle JS - Webpack.<br />
+Horizontal DB servers</p>
+</blockquote>
+<h3 id="http-request"><a name="user-content-http-request" href="#http-request" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>HTTP Request</h3>
+<blockquote>
+<p>NGINX recieves traffic<br />
+  Do I have a static file<br />
+    Should I cache it in ram with pageSpeed<br />
+    So pageSpeed gets added in the URL<br />
+  Dynamic<br />
+    Proxy it to a dynamic server<br />
+  NGINX with Damian FPM<br />
+    This will make it faster?</p>
+</blockquote>
+<p>/promotions<br />
+/promotions cached<br />
+/prmotions Apache</p>
+<h4 id="apache"><a name="user-content-apache" href="#apache" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>APACHE</h4>
+<blockquote>
+<p>Routes through CakePHP<br />
+  cake runs the controller<br />
+  DB</p>
+</blockquote>
+<h4 id="redismemcache"><a name="user-content-redismemcache" href="#redismemcache" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>REDIS/MEMCACHE</h4>
+<blockquote>
+<p>Third precence that will be introduced</p>
+</blockquote>
+<p>opt/www is a file server which only provides a file system.</p>
+<h3 id="3-steps-to-beef-up"><a name="user-content-3-steps-to-beef-up" href="#3-steps-to-beef-up" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3 steps to beef up</h3>
+<blockquote>
+<ol>
+<li>Beef Up NGINX</li>
+<li>Add an NGINX FPM server instead of Apache</li>
+<li>Add a Payload.</li>
+</ol>
+</blockquote>
+<p>Cached === &lsquo;To the file system&rsquo; (This is true).</p>
+<p>`</p>
+<h2 id="jetbeans-config"><a name="user-content-jetbeans-config" href="#jetbeans-config" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>JETBEANS Config</h2>
+<blockquote>
+<p>Multiple Select use to be <code>alt+j</code> now it is <code>ctrl+d</code> select all <code>ctrl+shift+alt+d</code><br />
+show console <code>alt+f12</code></p>
+</blockquote>
+<h1 id="adding-shell-scirpts-and-cron-jobs"><a name="user-content-adding-shell-scirpts-and-cron-jobs" href="#adding-shell-scirpts-and-cron-jobs" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Adding shell scirpts and cron jobs</h1>
+<blockquote>
+<ul>
+<li>Cron jobs are added to the Sched Task server as root.</li>
+<li>add a shell script inside of admin -  <a href="https://github.com/TCSTech/rpmsolutions/compare/rpmsol-963#diff-e6da02dfc0489e98b5d5753c86324961">https://github.com/TCSTech/rpmsolutions/compare/rpmsol-963#diff-e6da02dfc0489e98b5d5753c86324961</a></li>
+<li>Adding Shells to client reports</li>
+<li>sql -&gt; query (SELECT &lsquo;columns&rsquo;  FROM &lsquo;table&rsquo;, false=&rsquo;do not cache the query&rsquo;)</li>
+<li>We have all of the functionality to query the database in each_client.php class inside of admin</li>
+</ul>
+</blockquote>
+<h1 id="viewvars"><a name="user-content-viewvars" href="#viewvars" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>ViewVars</h1>
+<blockquote>
+<p>You can view the viewVars that are avaliable on the page.<br />
+<code>d($this-&gt;viewVars['myInstallers']);</code><br />
+can be used in the page as <br />
+<code>$myInstallers</code></p>
+</blockquote>
+<h1 id="promotions"><a name="user-content-promotions" href="#promotions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Promotions</h1>
+<blockquote>
+<p>Broken<br />
+<code>https://github.com/TCSTech/rpmsolutions/commit/5965222986b2323d96d6c967111b834100264c16</code><br />
+Fixed<br />
+<code>https://github.com/TCSTech/rpmsolutions/pull/6221/files</code></p>
+</blockquote>
+<h2 id="programing"><a name="user-content-programing" href="#programing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Programing</h2>
+<blockquote>
+<p>If we understand that programming languages are tools to teach programming concepts, we have conflicst between concepts and syntax.<br />
+-Ashley Williams</p>
+<p>Writing is nature&rsquo;s way of letting you know how sloppy your thinking is<br />
+-Ashley Williams</p>
+<p>Teaching is nature’s way of letting you know how sloppy your understanding is.<br />
+-Ashley Williams</p>
+</blockquote>
+<h1 id="beast-view-online"><a name="user-content-beast-view-online" href="#beast-view-online" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Beast View Online</h1>
+<p>On Catalog Controller the <code>function schedule_appointment</code> is what is called when you request a quote on the beast form.  That function get the promotion IDs and the Product Id and disableAppScripts</p>
+<blockquote>
+<p>You then create a new view for the email <code>$View = new View($this);</code><br />
+Uses a view as its email template, passed into [&lsquo;DynamicValidates&rsquo;][&lsquo;schedule_appointment_email_html&rsquo;]<br />
+<code>$this-&gt;data['DynamicValidates']['schedule_appointment_email_html'] = $html;</code><br />
+[&lsquo;DynamicValidates&rsquo;] object gets subject lines added to it.<br />
+Then it send you to the confirmation page <code>function confirm_schedule_appointment</code><br />
+Confirmation codes reads summary, checks for appointments, pulls promotion data. AND<br />
+<code>if ($this-&gt;Session-&gt;check('email_schedule_appointment_html')) {
+            $html = $this-&gt;Session-&gt;read('email_schedule_appointment_html');
+        }</code></p>
+<p>I need to know if I have access to the value of <code>$foriegn_hash_id_link;</code> in the confirmation page. </p>
+</blockquote>
+<h1 id="tire-size"><a name="user-content-tire-size" href="#tire-size" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tire Size</h1>
+<p><code>MyProduct.quick_search</code> in the $summary has the tire size without the lettters.</p>
+<blockquote>
+<p>Code changed <a href="https://github.com/TCSTech/rpmsolutions/pull/6313">https://github.com/TCSTech/rpmsolutions/pull/6313</a></p>
+</blockquote></article></body></html>
