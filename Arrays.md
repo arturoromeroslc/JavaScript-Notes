@@ -40,11 +40,11 @@ const toggleTodo = (todos) => {
         completed: !todos.completed
     };
 }
-
-The returned immutable object could present bugs if we add new properties 
 ```
+The returned immutable object could present bugs if we add new properties 
 
-> Immuatable Objecs with Object.assig( {}, obj, )
+
+>Immuatable Objecs with Object.assig( {}, obj, )
 ```js
 /*********************************************************************
 * assign properties of several object onto target object. 
