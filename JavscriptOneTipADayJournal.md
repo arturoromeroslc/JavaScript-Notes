@@ -41,7 +41,7 @@ const toggleTodo = (todos) => {
     };
 }
 
-//The returned immutable object could present bugs if we add new properties 
+The returned immutable object could present bugs if we add new properties 
 ```
 
 >Immuatable Objecs with Object.assig( {}, obj, )
