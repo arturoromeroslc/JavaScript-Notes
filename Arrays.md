@@ -49,7 +49,6 @@ The returned immutable object could present bugs if we add new properties
 /*********************************************************************
 * assign properties of several object onto target object. 
 * The argument order coresponds to the assign operator
-
 * the left argument is the ones whoes property will be asssigned to
 * every further arguments will represent one of the source objects 
 * whose properties will be copied to the target object. 
@@ -68,6 +67,5 @@ const toggleTodo = (todos) => {
         ...todos,
         completed: !todo.completed
     };
-
 }
 ```
